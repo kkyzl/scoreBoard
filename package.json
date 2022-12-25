@@ -9,6 +9,7 @@
     "server": "cd backend && yarn server",
     "install:prod": "cd frontend && yarn install --freeze-lockfile && cd ../backend && yarn install",
     "build": "cd frontend && yarn build",
+    "deploy": "cd backend && yarn deploy",
     "start_react": "cd backend && yarn deploy"
   },
   "dependencies": {
