@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import styled from "styled-components";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
-import axios from '../api';
-import { useScoreCard } from '../hooks/useScoreCard';
+import axios from "../api";
+import { useScoreCard } from "../hooks/useScoreCard";
 
 const Wrapper = styled.section`
   display: flex;
@@ -21,16 +21,16 @@ const Header = () => {
   const handleClear = async () => {
     const {
       data: { message },
-    } = await axios.delete('/cards');
+    } = await axios.delete("/cards");
     addRegularMessage(message);
   };
 
   return (
     <Wrapper>
       <Typography variant="h2">ScoreCard DB</Typography>
-      <Button variant="contained" color="secondary" onClick={handleClear}>
+      {/* <Button variant="contained" color="secondary" onClick={handleClear}>
         Clear
-      </Button>
+      </Button> */}
     </Wrapper>
   );
 };
